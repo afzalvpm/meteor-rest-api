@@ -1,0 +1,45 @@
+<head>
+  <title>Rest API</title>
+</head>
+
+<body>
+<!--   <h1>Restivus Example</h1>
+  <p>
+    Run the following from your command line:
+    <strong>curl http://localhost:3200/api/widgets</strong>
+  </p> -->
+</body>
+<template name="info">
+  <h2>Search Data</h2>
+<div>
+	{{#if posts}}
+	<table border="2" >
+	<tr>
+	<th style="width:100px;">Name</th>
+	<th style="width:100px;">Age</th>
+	<th style="width:100px;">Delete</th>
+	</tr>
+
+    {{#each posts}}
+    <tr data-id={{this._id}}>
+    <td>{{this.name}}</td>
+    <td>{{this.age}}</td>
+    <th class="deleteData"><a href="#">x</a></th>
+    </tr>
+    {{/each}}
+    </table>
+    {{/if}}
+    <br/>
+    <form class="addNew">
+    Name	<input type="text" id="name"><br/>
+    Age 	<input type="text" id="age"><br/>
+    <button>Add New</button>
+	</form>
+
+</div>
+</template>
+
+<template name="posts">
+
+
+</template>
